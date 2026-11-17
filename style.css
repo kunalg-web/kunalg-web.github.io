@@ -714,4 +714,210 @@ footer > a:last-child {
     }
 
 }
+/* =================================
+   PROJECT 01
+================================= */
 
+#project-01 {
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+.section-heading {
+    max-width: 850px;
+    margin-bottom: 65px;
+}
+
+.section-number {
+    color: #b69a70;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    max-width: 650px;
+    color: #aaa;
+    line-height: 1.8;
+}
+
+
+/* PROJECT SUBSECTIONS */
+
+.project-subsection {
+    margin-top: 65px;
+}
+
+.subsection-heading {
+    margin-bottom: 25px;
+}
+
+.subsection-number {
+    display: block;
+    color: #b69a70;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.subsection-heading h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.subsection-heading p {
+    max-width: 650px;
+    color: #999;
+    line-height: 1.8;
+}
+
+
+/* VIDEO THUMBNAIL */
+
+.video-thumbnail {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #171717;
+    text-decoration: none;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.video-thumbnail:hover img {
+    transform: scale(1.03);
+    opacity: 0.65;
+}
+
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.play-icon {
+    width: 65px;
+    height: 65px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4px;
+    font-size: 1.2rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.video-thumbnail:hover .play-icon {
+    background: #fff;
+    color: #111;
+}
+
+.media-caption {
+    color: #777;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+
+/* PDF PORTFOLIO */
+
+.portfolio-subsection {
+    margin-top: 110px;
+    padding-top: 70px;
+    border-top: 1px solid #292929;
+}
+
+.pdf-preview {
+    width: 100%;
+    height: 750px;
+    background: #171717;
+    border: 1px solid #292929;
+    overflow: hidden;
+}
+
+.pdf-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.pdf-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 25px;
+}
+
+.text-link {
+    color: #c2a77d;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #806d50;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.text-link:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    #project-01 {
+        padding-top: 65px;
+        padding-bottom: 80px;
+    }
+
+    .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .project-subsection {
+        margin-top: 45px;
+    }
+
+    .portfolio-subsection {
+        margin-top: 75px;
+        padding-top: 50px;
+    }
+
+    .pdf-preview {
+        height: 500px;
+    }
+
+    .pdf-actions {
+        gap: 20px;
+    }
+
+}
