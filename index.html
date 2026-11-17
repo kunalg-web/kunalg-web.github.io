@@ -1,276 +1,585 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Creative Portfolio | Selected Works</title>
-    <meta name="description" content="A creative portfolio showcasing 3D animation, editorial design, branding and web development.">
+    <title>K.G. | Creative Portfolio</title>
+
+    <meta name="description" content="A creative portfolio showcasing 3D animation, visual development, graphic design and digital projects.">
 
     <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- NAVIGATION -->
 
-    <header class="navbar">
-        <a href="#" class="logo">K<span>.</span>G</a>
+    <header>
+        <nav class="navbar">
 
-        <nav>
-            <a href="#work">WORK</a>
-            <a href="#about">ABOUT</a>
-            <a href="#contact">CONTACT</a>
+            <a href="#home" class="logo">K.G.</a>
+
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#work">WORK</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact" class="nav-cta">CONTACT</a></li>
+            </ul>
+
         </nav>
-
-        <a href="#contact" class="nav-button">LET'S CONNECT ↗</a>
     </header>
 
 
     <!-- HERO SECTION -->
 
-    <main>
-
-    <section class="hero">
+    <section class="hero" id="home">
 
         <div class="hero-content">
 
-            <p class="eyebrow">INDEPENDENT CREATIVE PORTFOLIO — 2026</p>
+            <p class="hero-subtitle">
+                CREATIVE PORTFOLIO · 2026
+            </p>
 
             <h1>
-                DESIGNING<br>
-                <span>BEYOND</span> THE<br>
-                ORDINARY.
+                Design.<br>
+                Create.<br>
+                <span>Develop.</span>
             </h1>
 
             <p class="hero-description">
-                A collection of creative work exploring the intersection
-                of design, technology and visual storytelling.
+                A collection of creative and technical projects
+                exploring 3D animation, visual development,
+                graphic design and digital experiences.
             </p>
 
-            <a href="#work" class="primary-button">
-                EXPLORE SELECTED WORK <span>↘</span>
+            <a href="#work" class="hero-button">
+                EXPLORE MY WORK
+                <span>↗</span>
             </a>
 
         </div>
 
         <div class="hero-bottom">
-            <span>3D / DESIGN / DIGITAL</span>
+            <span>SELECTED PROJECTS</span>
             <span>SCROLL TO EXPLORE ↓</span>
-            <span>SYDNEY, AUSTRALIA</span>
         </div>
 
     </section>
 
 
-    <!-- INTRODUCTION -->
+    <!-- SELECTED WORK -->
 
-    <section class="introduction">
-
-        <p class="eyebrow">01 — THE CREATIVE PRACTICE</p>
-
-        <h2>
-            Bringing ideas to life through
-            <span>visual design, digital media</span>
-            and creative experimentation.
-        </h2>
-
-    </section>
-
-
-    <!-- PROJECTS -->
-
-    <section class="work" id="work">
+    <section class="content-section" id="work">
 
         <div class="section-heading">
-            <div>
-                <p class="eyebrow">02 — PORTFOLIO</p>
-                <h2>SELECTED WORK<span>.</span></h2>
+
+            <p class="section-number">01 — SELECTED WORK</p>
+
+            <h2>
+                Projects &amp; Creative Work
+            </h2>
+
+            <p class="section-description">
+                A selection of projects demonstrating creative
+                development, technical skills and visual
+                problem-solving across different disciplines.
+            </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+            <!-- PROJECT 01 CARD -->
+
+            <a href="#project-01" class="project-card">
+
+                <div class="project-image">
+                    <img
+                        src="assets/images/3d-animation.jpg"
+                        alt="3D animation major work thumbnail"
+                    >
+                    <div class="project-overlay">
+                        <span>VIEW PROJECT ↗</span>
+                    </div>
+                </div>
+
+                <div class="project-info">
+
+                    <p class="project-category">
+                        PROJECT 01 / 3D ANIMATION
+                    </p>
+
+                    <h3>
+                        3D Animation &amp; Visual Development
+                    </h3>
+
+                    <p>
+                        Blender · Animation · Visual Effects
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- PROJECT 02 CARD -->
+
+            <a href="#editorial" class="project-card">
+
+                <div class="project-image">
+                    <img
+                        src="assets/images/magazine.jpg"
+                        alt="Magazine and editorial design project"
+                    >
+                    <div class="project-overlay">
+                        <span>VIEW PROJECT ↗</span>
+                    </div>
+                </div>
+
+                <div class="project-info">
+
+                    <p class="project-category">
+                        PROJECT 02 / EDITORIAL DESIGN
+                    </p>
+
+                    <h3>
+                        Magazine &amp; Editorial Design
+                    </h3>
+
+                    <p>
+                        Adobe InDesign · Layout · Typography
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- PROJECT 03 CARD -->
+
+            <a href="#branding" class="project-card">
+
+                <div class="project-image">
+                    <img
+                        src="assets/images/branding.jpg"
+                        alt="Branding and graphic design project"
+                    >
+                    <div class="project-overlay">
+                        <span>VIEW PROJECT ↗</span>
+                    </div>
+                </div>
+
+                <div class="project-info">
+
+                    <p class="project-category">
+                        PROJECT 03 / GRAPHIC DESIGN
+                    </p>
+
+                    <h3>
+                        Branding &amp; Graphic Design
+                    </h3>
+
+                    <p>
+                        Visual Identity · Logo Design · Photoshop
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- PROJECT 04 CARD -->
+
+            <a href="#web-design" class="project-card">
+
+                <div class="project-image">
+                    <img
+                        src="assets/images/web-design.jpg"
+                        alt="Website and digital design project"
+                    >
+                    <div class="project-overlay">
+                        <span>VIEW PROJECT ↗</span>
+                    </div>
+                </div>
+
+                <div class="project-info">
+
+                    <p class="project-category">
+                        PROJECT 04 / WEB DESIGN
+                    </p>
+
+                    <h3>
+                        Web &amp; Digital Design
+                    </h3>
+
+                    <p>
+                        HTML · CSS · Digital Experiences
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECT 01: 3D ANIMATION -->
+
+    <section class="content-section project-detail" id="project-01">
+
+        <div class="section-heading">
+
+            <p class="section-number">PROJECT 01</p>
+
+            <h2>
+                3D Animation &amp;<br>
+                Visual Development
+            </h2>
+
+            <p class="section-description">
+                A cinematic 3D animation major work created in
+                Blender, accompanied by a creative process
+                portfolio documenting the development,
+                experimentation and design decisions behind
+                the project.
+            </p>
+
+        </div>
+
+
+        <!-- PART 01: FILM -->
+
+        <div class="project-subsection">
+
+            <div class="subsection-heading">
+
+                <span class="subsection-number">
+                    01 / FILM
+                </span>
+
+                <h3>
+                    3D Animation Major Work
+                </h3>
+
+                <p>
+                    A cinematic short film developed using
+                    3D modelling, animation, environmental
+                    design, lighting, compositing and visual
+                    effects.
+                </p>
+
             </div>
 
-            <p>A selection of projects across<br>different creative disciplines.</p>
-        </div>
 
+            <!-- CLICKABLE VIDEO THUMBNAIL -->
 
-     <!-- PROJECT 01 -->
-<section class="content-section" id="project-01">
-
-    <div class="section-heading">
-        <p class="section-number">PROJECT 01</p>
-        <h2>3D Animation & Visual Development</h2>
-        <p class="section-description">
-            A cinematic 3D animation major work, supported by a
-            creative process portfolio documenting the development
-            and design process.
-        </p>
-    </div>
-
-    <!-- PART 01: 3D MAJOR WORK -->
-    <div class="project-subsection">
-
-        <div class="subsection-heading">
-            <span class="subsection-number">01 / FILM</span>
-            <h3>3D Animation Major Work</h3>
-            <p>
-                A cinematic short film created in Blender, exploring
-                3D modelling, animation, lighting, environments and
-                visual effects.
-            </p>
-        </div>
-
-        <a
-            href="assets/videos/cinematic-film.mp4"
-            target="_blank"
-            class="video-thumbnail"
-            aria-label="Watch the 3D animation major work"
-        >
-            <img
-                src="assets/images/3d-animation.jpg"
-                alt="Thumbnail for 3D animation major work"
-            >
-
-            <div class="play-overlay">
-                <span class="play-icon">&#9654;</span>
-                <span>WATCH FILM</span>
-            </div>
-        </a>
-
-        <p class="media-caption">
-            Blender | 3D Modelling | Animation | Compositing
-        </p>
-
-    </div>
-
-
-    <!-- PART 02: CREATIVE PROCESS PORTFOLIO -->
-    <div class="project-subsection portfolio-subsection">
-
-        <div class="subsection-heading">
-            <span class="subsection-number">02 / PORTFOLIO</span>
-            <h3>Creative Process Portfolio</h3>
-            <p>
-                An InDesign-produced portfolio documenting the
-                research, planning, experimentation and creative
-                development behind the major work.
-            </p>
-        </div>
-
-        <div class="pdf-preview">
-            <iframe
-                src="assets/documents/3d-animation-portfolio.pdf"
-                title="3D Animation Creative Process Portfolio"
-                loading="lazy">
-            </iframe>
-        </div>
-
-        <div class="pdf-actions">
             <a
-                href="assets/documents/3d-animation-portfolio.pdf"
+                href="assets/videos/cinematic-film.mp4"
                 target="_blank"
-                class="text-link"
+                rel="noopener"
+                class="video-thumbnail"
+                aria-label="Open and watch the 3D animation major work"
             >
-                VIEW FULL PORTFOLIO ↗
+
+                <img
+                    src="assets/images/3d-animation.jpg"
+                    alt="Preview thumbnail of the 3D animation film"
+                >
+
+                <div class="play-overlay">
+
+                    <div class="play-icon">
+                        ▶
+                    </div>
+
+                    <span>WATCH FILM</span>
+
+                </div>
+
             </a>
 
-            <a
-                href="assets/documents/3d-animation-portfolio.pdf"
-                download
-                class="text-link"
-            >
-                DOWNLOAD PDF ↓
-            </a>
+
+            <div class="media-details">
+
+                <p class="media-caption">
+                    BLENDER / 3D MODELLING / ANIMATION / COMPOSITING
+                </p>
+
+                <p class="media-description">
+                    Click the thumbnail to open and play the
+                    completed film.
+                </p>
+
+            </div>
+
         </div>
 
-        <p class="media-caption">
-            Adobe InDesign | Editorial Design | Creative Documentation
-        </p>
 
-    </div>
+        <!-- PART 02: CREATIVE PROCESS PORTFOLIO -->
 
-</section>
+        <div class="project-subsection portfolio-subsection">
 
-            <!-- PROJECT 02 -->
+            <div class="subsection-heading">
 
-            <article class="project">
+                <span class="subsection-number">
+                    02 / CREATIVE PROCESS
+                </span>
 
-                <a href="projects/editorial-design.html" class="project-image">
-                    <img src="assets/images/magazine.jpg"
-                         alt="Magazine and editorial design">
+                <h3>
+                    Creative Process Portfolio
+                </h3>
 
-                    <span class="image-label">02 / 04</span>
-                    <span class="image-arrow">↗</span>
-                </a>
+                <p>
+                    A designed portfolio documenting the
+                    creative development of the major work,
+                    including initial concepts, research,
+                    planning, modelling, experimentation and
+                    final production.
+                </p>
 
-                <div class="project-info">
-                    <div>
-                        <p class="project-category">EDITORIAL / INDESIGN</p>
-                        <h3>Magazine & Editorial Design</h3>
-                        <p class="project-description">
-                            Publication layouts, typography,
-                            visual hierarchy and editorial storytelling.
-                        </p>
-                    </div>
-                    <span class="project-year">2026</span>
+            </div>
+
+
+            <!-- EMBEDDED PDF -->
+
+            <div class="pdf-container">
+
+                <div class="pdf-preview">
+
+                    <iframe
+                        src="assets/documents/3d-animation-portfolio.pdf"
+                        title="3D Animation Creative Process Portfolio"
+                        loading="lazy">
+                    </iframe>
+
                 </div>
 
-            </article>
+            </div>
 
 
-            <!-- PROJECT 03 -->
+            <!-- PDF LINKS -->
 
-            <article class="project">
+            <div class="pdf-actions">
 
-                <a href="projects/branding.html" class="project-image">
-                    <img src="assets/images/branding.jpg"
-                         alt="Logo and brand identity design">
-
-                    <span class="image-label">03 / 04</span>
-                    <span class="image-arrow">↗</span>
+                <a
+                    href="assets/documents/3d-animation-portfolio.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-link"
+                >
+                    VIEW FULL PORTFOLIO ↗
                 </a>
 
-                <div class="project-info">
-                    <div>
-                        <p class="project-category">GRAPHIC DESIGN / BRANDING</p>
-                        <h3>Identity & Logo Design</h3>
-                        <p class="project-description">
-                            Visual identities, logo development,
-                            typography and brand systems.
-                        </p>
-                    </div>
-                    <span class="project-year">2026</span>
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 04 -->
-
-            <article class="project">
-
-                <a href="projects/web-design.html" class="project-image">
-                    <img src="assets/images/web-design.jpg"
-                         alt="Website and digital interface design">
-
-                    <span class="image-label">04 / 04</span>
-                    <span class="image-arrow">↗</span>
+                <a
+                    href="assets/documents/3d-animation-portfolio.pdf"
+                    download
+                    class="text-link"
+                >
+                    DOWNLOAD PDF ↓
                 </a>
 
-                <div class="project-info">
-                    <div>
-                        <p class="project-category">DIGITAL / WEB DEVELOPMENT</p>
-                        <h3>Web Design & Development</h3>
-                        <p class="project-description">
-                            Digital experiences, website layouts,
-                            interface design and development.
-                        </p>
-                    </div>
-                    <span class="project-year">2026</span>
+            </div>
+
+
+            <p class="media-caption">
+                ADOBE INDESIGN / EDITORIAL DESIGN / CREATIVE DOCUMENTATION
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECT 02: EDITORIAL DESIGN -->
+
+    <section class="content-section detail-section" id="editorial">
+
+        <div class="section-heading">
+
+            <p class="section-number">PROJECT 02</p>
+
+            <h2>
+                Magazine &amp; Editorial Design
+            </h2>
+
+            <p class="section-description">
+                Exploring visual communication through
+                typography, page composition, image selection
+                and editorial layouts.
+            </p>
+
+        </div>
+
+
+        <div class="editorial-layout">
+
+            <div class="editorial-image">
+                <img
+                    src="assets/images/magazine.jpg"
+                    alt="Magazine editorial layout"
+                >
+            </div>
+
+            <div class="editorial-content">
+
+                <p class="subsection-number">
+                    EDITORIAL / PUBLICATION DESIGN
+                </p>
+
+                <h3>
+                    School Magazine
+                </h3>
+
+                <p>
+                    Designed magazine pages using Adobe
+                    InDesign, combining typography, photography
+                    and graphic elements to create cohesive
+                    editorial layouts.
+                </p>
+
+                <p>
+                    Developed page templates and layouts while
+                    coordinating content, maintaining visual
+                    consistency and working within project
+                    deadlines.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Adobe InDesign</span>
+                    <span>Typography</span>
+                    <span>Layout Design</span>
                 </div>
 
-            </article>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECT 03: BRANDING -->
+
+    <section class="content-section detail-section" id="branding">
+
+        <div class="section-heading">
+
+            <p class="section-number">PROJECT 03</p>
+
+            <h2>
+                Branding &amp; Graphic Design
+            </h2>
+
+            <p class="section-description">
+                Exploring visual identity, graphic composition
+                and the development of visual concepts.
+            </p>
+
+        </div>
+
+
+        <div class="branding-layout">
+
+            <div class="branding-content">
+
+                <p class="subsection-number">
+                    GRAPHIC DESIGN / VISUAL IDENTITY
+                </p>
+
+                <h3>
+                    Branding &amp; Logo Development
+                </h3>
+
+                <p>
+                    A collection of graphic design explorations
+                    focused on visual identity, logo concepts,
+                    typography and composition.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Adobe Photoshop</span>
+                    <span>Graphic Design</span>
+                    <span>Visual Identity</span>
+                </div>
+
+            </div>
+
+            <div class="branding-image">
+                <img
+                    src="assets/images/branding.jpg"
+                    alt="Branding and graphic design examples"
+                >
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECT 04: WEB DESIGN -->
+
+    <section class="content-section detail-section" id="web-design">
+
+        <div class="section-heading">
+
+            <p class="section-number">PROJECT 04</p>
+
+            <h2>
+                Web &amp; Digital Design
+            </h2>
+
+            <p class="section-description">
+                Developing digital experiences through
+                interface design, web technologies and
+                visual presentation.
+            </p>
+
+        </div>
+
+
+        <div class="web-layout">
+
+            <div class="web-image">
+                <img
+                    src="assets/images/web-design.jpg"
+                    alt="Website design project preview"
+                >
+            </div>
+
+            <div class="web-content">
+
+                <p class="subsection-number">
+                    DIGITAL / WEB DEVELOPMENT
+                </p>
+
+                <h3>
+                    Website Development
+                </h3>
+
+                <p>
+                    Exploring the design and development of
+                    responsive websites, combining visual
+                    presentation with functional layouts
+                    and navigation.
+                </p>
+
+                <div class="skill-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Responsive Design</span>
+                </div>
+
+            </div>
 
         </div>
 
@@ -279,38 +588,67 @@
 
     <!-- ABOUT -->
 
-    <section class="about" id="about">
+    <section class="content-section about-section" id="about">
 
-        <p class="eyebrow">03 — ABOUT</p>
+        <div class="about-grid">
 
-        <div class="about-content">
+            <div class="about-heading">
 
-            <h2>
-                Creativity meets
-                <span>technical precision.</span>
-            </h2>
+                <p class="section-number">
+                    ABOUT ME
+                </p>
+
+                <h2>
+                    Creativity meets<br>
+                    technical thinking.
+                </h2>
+
+            </div>
+
 
             <div class="about-text">
+
                 <p>
-                    I am an emerging creative with an interest in
-                    multimedia, visual communication and technology.
-                    My work spans 3D animation, graphic design,
-                    editorial design and digital development.
+                    I am a recent high school graduate with
+                    an interest in creative design, digital
+                    media and technical problem-solving.
                 </p>
 
                 <p>
-                    Through experimentation and hands-on projects,
-                    I aim to combine technical skills with thoughtful
-                    design to create engaging visual experiences.
+                    Through school projects and independent
+                    creative work, I have developed experience
+                    in 3D modelling, animation, graphic design,
+                    editorial layouts and digital production.
                 </p>
 
-                <div class="software">
-                    <span>BLENDER</span>
-                    <span>PHOTOSHOP</span>
-                    <span>INDESIGN</span>
-                    <span>PREMIERE PRO</span>
-                    <span>HTML / CSS</span>
+                <p>
+                    I enjoy exploring new software, developing
+                    practical skills and bringing ideas to life
+                    through a combination of creativity,
+                    experimentation and attention to detail.
+                </p>
+
+
+                <div class="about-skills">
+
+                    <div class="skill-column">
+                        <h4>CREATIVE</h4>
+                        <p>3D Modelling</p>
+                        <p>Animation</p>
+                        <p>Graphic Design</p>
+                        <p>Visual Development</p>
+                    </div>
+
+                    <div class="skill-column">
+                        <h4>TECHNICAL</h4>
+                        <p>Blender</p>
+                        <p>Adobe InDesign</p>
+                        <p>Adobe Photoshop</p>
+                        <p>HTML &amp; CSS</p>
+                    </div>
+
                 </div>
+
             </div>
 
         </div>
@@ -320,32 +658,49 @@
 
     <!-- CONTACT -->
 
-    <section class="contact" id="contact">
+    <section class="content-section contact-section" id="contact">
 
-        <p class="eyebrow">04 — GET IN TOUCH</p>
+        <p class="section-number">
+            GET IN TOUCH
+        </p>
 
-        <h2>HAVE A PROJECT<br>IN MIND<span>?</span></h2>
+        <h2>
+            Let's connect.
+        </h2>
 
-        <p>Interested in collaborating or learning more about my work?</p>
+        <p>
+            Interested in discussing an opportunity,
+            project or collaboration?
+        </p>
 
-        <a href="mailto:your.email@example.com" class="contact-button">
-            GET IN TOUCH ↗
+        <a
+            href="mailto:your.email@example.com"
+            class="contact-link"
+        >
+            YOUR.EMAIL@EXAMPLE.COM ↗
         </a>
 
     </section>
-
-    </main>
 
 
     <!-- FOOTER -->
 
     <footer>
-        <a href="#" class="logo">K<span>.</span>G</a>
 
-        <p>© 2026 — CREATIVE PORTFOLIO</p>
+        <a href="#home" class="footer-logo">
+            K.G.
+        </a>
 
-        <a href="#top">BACK TO TOP ↑</a>
+        <p>
+            © 2026 K.G. ALL RIGHTS RESERVED.
+        </p>
+
+        <a href="#home" class="back-to-top">
+            BACK TO TOP ↑
+        </a>
+
     </footer>
+
 
 </body>
 </html>
