@@ -1057,3 +1057,171 @@ footer p,
     }
 
 }
+
+/* =========================================
+   PROJECT 01 - LAYOUT FIX
+========================================= */
+
+#project-01 {
+    display: block !important;
+    width: 85%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 0;
+}
+
+/* Keep project heading vertically stacked */
+
+#project-01 .section-heading {
+    display: block !important;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 0 70px 0;
+}
+
+#project-01 .section-heading h2 {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#project-01 .section-description {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin: 0;
+}
+
+
+/* =========================================
+   PROJECT SUBSECTIONS
+========================================= */
+
+#project-01 .project-subsection {
+    display: block !important;
+    width: 100%;
+    margin-top: 65px;
+}
+
+#project-01 .subsection-heading {
+    display: block !important;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#project-01 .subsection-heading h3 {
+    margin-bottom: 15px;
+}
+
+#project-01 .subsection-heading p {
+    max-width: 750px;
+}
+
+
+/* =========================================
+   VIDEO THUMBNAIL
+========================================= */
+
+#project-01 .video-thumbnail {
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #202020;
+}
+
+#project-01 .video-thumbnail img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#project-01 .play-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================================
+   PDF PORTFOLIO
+========================================= */
+
+#project-01 .portfolio-subsection {
+    display: block !important;
+    width: 100%;
+    margin-top: 120px;
+    padding-top: 75px;
+    border-top: 1px solid #303030;
+}
+
+#project-01 .pdf-container {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #171717;
+    border: 1px solid #303030;
+}
+
+#project-01 .pdf-preview {
+    display: block;
+    width: 100% !important;
+    height: 800px !important;
+    min-height: 800px;
+    overflow: hidden;
+    background: #202020;
+}
+
+#project-01 .pdf-preview iframe {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 800px;
+    border: none;
+}
+
+
+/* =========================================
+   PDF LINKS
+========================================= */
+
+#project-01 .pdf-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    #project-01 {
+        width: 90%;
+        padding: 80px 0;
+    }
+
+    #project-01 .pdf-preview {
+        height: 550px !important;
+        min-height: 550px;
+    }
+
+    #project-01 .pdf-preview iframe {
+        min-height: 550px;
+    }
+
+    #project-01 .portfolio-subsection {
+        margin-top: 80px;
+        padding-top: 50px;
+    }
+
+}
+
