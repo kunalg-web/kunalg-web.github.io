@@ -4,19 +4,13 @@
 ========================================= */
 
 :root {
-    --background: #101010;
-    --surface: #171717;
-    --surface-light: #202020;
-    --border: #303030;
-
-    --text: #e8e5df;
-    --text-muted: #999999;
-
-    --gold: #c2a77d;
-    --gold-dark: #806d50;
-
-    --font-main: 'DM Sans', Arial, sans-serif;
-    --font-display: 'Playfair Display', Georgia, serif;
+    --background: #0b0c0e;
+    --surface: #111316;
+    --surface-light: #17191d;
+    --white: #f1f0ec;
+    --muted: #858990;
+    --gold: #c49a63;
+    --border: #292b30;
 }
 
 * {
@@ -27,30 +21,24 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 90px;
 }
 
 body {
     background: var(--background);
-    color: var(--text);
-    font-family: var(--font-main);
-    line-height: 1.7;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
     overflow-x: hidden;
 }
 
 a {
-    color: inherit;
     text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
+    color: inherit;
 }
 
 ::selection {
     background: var(--gold);
-    color: var(--background);
+    color: #080808;
 }
 
 
@@ -58,1038 +46,319 @@ img {
    NAVIGATION
 ========================================= */
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-
-    background: rgba(16, 16, 16, 0.92);
-    backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
 .navbar {
-    width: 85%;
-    max-width: 1400px;
-    height: 85px;
-
-    margin: auto;
-
+    height: 72px;
+    width: 100%;
+    padding: 0 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11, 12, 14, 0.94);
+    backdrop-filter: blur(15px);
 }
 
 .logo {
-    font-size: 1.25rem;
-    font-weight: 600;
-    letter-spacing: 4px;
-    color: var(--text);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.logo span {
+    color: var(--gold);
 }
 
 .nav-links {
     display: flex;
-    align-items: center;
-    gap: 35px;
-    list-style: none;
+    gap: 38px;
 }
 
-.nav-links a {
-    color: var(--text-muted);
-    font-size: 0.72rem;
-    letter-spacing: 1.5px;
+.nav-links a,
+.nav-contact {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    color: var(--muted);
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-contact:hover {
     color: var(--gold);
 }
 
-.nav-links .nav-cta {
-    color: var(--gold);
-    border: 1px solid var(--gold-dark);
-    padding: 11px 20px;
-    transition: all 0.3s ease;
+.nav-contact {
+    border: 1px solid var(--border);
+    padding: 13px 19px;
+    color: var(--white);
 }
 
-.nav-links .nav-cta:hover {
-    background: var(--gold);
-    color: var(--background);
+.nav-contact span {
+    color: var(--gold);
+    margin-left: 8px;
 }
 
 
 /* =========================================
-   HERO SECTION
+   HERO
 ========================================= */
 
 .hero {
-    min-height: 100vh;
-
+    min-height: 700px;
+    height: calc(100vh - 72px);
+    max-height: 950px;
+    padding: 0 7%;
     position: relative;
-
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding: 150px 8% 120px;
-
+    align-items: center;
+    border-bottom: 1px solid var(--border);
     background:
-        linear-gradient(
-            90deg,
-            rgba(16, 16, 16, 0.95) 0%,
-            rgba(16, 16, 16, 0.75) 50%,
-            rgba(16, 16, 16, 0.4) 100%
+        radial-gradient(
+            ellipse at 75% 45%,
+            rgba(45, 43, 38, 0.14),
+            transparent 55%
         ),
-        linear-gradient(
-            0deg,
-            rgba(16, 16, 16, 1) 0%,
-            transparent 40%
-        ),
-        url("assets/images/hero.jpg") center / cover no-repeat;
+        linear-gradient(120deg, #101113, #0b0c0e 75%);
 }
 
 .hero-content {
-    max-width: 950px;
+    margin-top: -20px;
+    position: relative;
+    z-index: 2;
 }
 
-.hero-subtitle {
+.eyebrow,
+.section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
     color: var(--gold);
-    font-size: 0.75rem;
-    letter-spacing: 4px;
-    margin-bottom: 30px;
-}
-
-.hero h1 {
-    font-size: clamp(4rem, 9vw, 8rem);
-    line-height: 1.02;
-    font-weight: 400;
-    letter-spacing: -4px;
     margin-bottom: 35px;
 }
 
-.hero h1 span {
+.status-dot {
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-right: 10px;
+}
+
+.hero h1 {
+    font-size: clamp(65px, 7.3vw, 112px);
+    font-weight: 800;
+    line-height: 0.91;
+    letter-spacing: -7px;
+    margin-bottom: 30px;
+}
+
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--gold);
+}
+
+.gold {
     color: var(--gold);
-    font-family: var(--font-display);
-    font-style: italic;
 }
 
 .hero-description {
-    max-width: 550px;
-    color: #b0b0b0;
-    font-size: 0.95rem;
-    line-height: 2;
-    margin-bottom: 40px;
+    color: #a7a9ae;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 390px;
+    margin-bottom: 30px;
 }
 
 .hero-button {
     display: inline-flex;
     align-items: center;
-    gap: 25px;
-
-    padding: 15px 25px;
-
-    border: 1px solid var(--gold-dark);
-    color: var(--gold);
-
-    font-size: 0.72rem;
-    letter-spacing: 2px;
-
+    gap: 35px;
+    background: var(--white);
+    color: #111;
+    padding: 17px 22px;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
     transition: all 0.3s ease;
 }
 
 .hero-button:hover {
     background: var(--gold);
-    color: var(--background);
+    transform: translateY(-3px);
 }
 
-.hero-bottom {
-    position: absolute;
-    bottom: 45px;
-    left: 8%;
-    right: 8%;
+.hero-button span {
+    font-size: 15px;
+}
 
+.hero-footer {
+    position: absolute;
+    bottom: 28px;
+    left: 7%;
+    right: 7%;
     display: flex;
     justify-content: space-between;
-
-    color: #777;
-    font-size: 0.65rem;
-    letter-spacing: 2px;
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 1.3px;
+    color: var(--muted);
 }
 
 
 /* =========================================
-   GENERAL SECTIONS
+   INTRODUCTION
 ========================================= */
 
-.content-section {
-    width: 85%;
-    max-width: 1400px;
-
-    margin: auto;
-    padding: 120px 0;
+.introduction {
+    padding: 120px 9%;
+    border-bottom: 1px solid var(--border);
 }
 
-.section-heading {
-    max-width: 850px;
-    margin-bottom: 70px;
+.section-label {
+    margin-bottom: 35px;
 }
 
-.section-number {
-    color: var(--gold);
-    font-size: 0.7rem;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
+.section-label span {
+    color: var(--white);
 }
 
-.section-heading h2 {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 400;
-    line-height: 1.15;
-    margin-bottom: 25px;
+.intro-content {
+    max-width: 1100px;
 }
 
-.section-description {
-    max-width: 650px;
-    color: var(--text-muted);
-    font-size: 0.95rem;
+.intro-content h2 {
+    font-size: clamp(35px, 4.5vw, 62px);
+    line-height: 1.2;
+    letter-spacing: -3px;
+    font-weight: 600;
+    max-width: 1000px;
+}
+
+.intro-content h2 span {
+    color: #777b83;
+}
+
+.intro-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 55px;
+    gap: 50px;
+}
+
+.intro-bottom p {
+    color: var(--muted);
+    max-width: 430px;
+    font-size: 13px;
     line-height: 2;
 }
 
+.intro-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: var(--gold);
+}
+
 
 /* =========================================
-   SELECTED WORK / PROJECT GRID
+   WORK SECTION
 ========================================= */
 
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 65px 35px;
+.work-section {
+    padding: 120px 9%;
 }
 
-.project-card {
-    display: block;
-}
-
-.project-image {
-    position: relative;
-
-    width: 100%;
-    aspect-ratio: 16 / 10;
-
-    overflow: hidden;
-    background: var(--surface-light);
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    transition:
-        transform 0.7s ease,
-        opacity 0.5s ease;
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.05);
-    opacity: 0.65;
-}
-
-.project-overlay {
-    position: absolute;
-    inset: 0;
-
+.work-heading {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    opacity: 0;
-    transition: opacity 0.4s ease;
-
-    color: #fff;
-    font-size: 0.7rem;
-    letter-spacing: 3px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 65px;
 }
 
-.project-card:hover .project-overlay {
-    opacity: 1;
+.work-heading h2 {
+    font-size: clamp(50px, 6vw, 80px);
+    letter-spacing: -5px;
+    line-height: 1;
 }
 
-.project-info {
-    padding-top: 22px;
+.work-heading h2 span {
+    color: var(--gold);
+}
+
+.work-subtitle {
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    line-height: 2;
+    text-align: right;
+}
+
+
+/* =========================================
+   PROJECT CONTAINER
+========================================= */
+
+.project {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.project-header {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+}
+
+.project-number span {
+    color: var(--gold);
 }
 
 .project-category {
     color: var(--gold);
-    font-size: 0.68rem;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
 }
 
-.project-info h3 {
-    font-family: var(--font-display);
-    font-size: 1.55rem;
-    font-weight: 400;
-    margin-bottom: 8px;
-}
-
-.project-info p {
-    color: var(--text-muted);
-    font-size: 0.8rem;
-}
-
-
-/* =========================================
-   PROJECT 01
-   3D ANIMATION
-========================================= */
-
-.project-detail {
-    border-top: 1px solid var(--border);
-}
-
-.project-subsection {
-    margin-top: 65px;
-}
-
-.subsection-heading {
-    margin-bottom: 30px;
-}
-
-.subsection-number {
-    display: block;
-
-    color: var(--gold);
-    font-size: 0.68rem;
-    letter-spacing: 2.5px;
-
-    margin-bottom: 15px;
-}
-
-.subsection-heading h3 {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 15px;
-}
-
-.subsection-heading p {
-    max-width: 700px;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.9;
-}
-
-
-/* =========================================
-   PROJECT 01 - PART 01
-   VIDEO THUMBNAIL
-========================================= */
-
-.video-thumbnail {
-    position: relative;
-
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-
-    overflow: hidden;
-    background: var(--surface);
-
-    cursor: pointer;
-}
-
-.video-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    transition:
-        transform 0.7s ease,
-        opacity 0.5s ease;
-}
-
-.video-thumbnail:hover img {
-    transform: scale(1.035);
-    opacity: 0.6;
-}
-
-.play-overlay {
-    position: absolute;
-    inset: 0;
-
+.project-title-row {
+    padding: 55px 0 45px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-
-    color: #fff;
-    font-size: 0.7rem;
-    letter-spacing: 3px;
-}
-
-.play-icon {
-    width: 75px;
-    height: 75px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding-left: 4px;
-
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-
-    font-size: 1.25rem;
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
-}
-
-.video-thumbnail:hover .play-icon {
-    background: #fff;
-    color: #111;
-    transform: scale(1.1);
-}
-
-.media-details {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 15px;
+    align-items: flex-start;
+}
 
+.project-title-row h3 {
+    font-size: clamp(35px, 5vw, 65px);
+    letter-spacing: -3px;
+    line-height: 1;
+}
+
+.project-title-row h3 span {
+    color: #777b83;
+}
+
+.project-description {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
     margin-top: 20px;
+    max-width: 460px;
 }
 
-.media-caption {
-    color: #777;
-    font-size: 0.67rem;
-    letter-spacing: 1.5px;
-}
-
-.media-description {
-    color: #777;
-    font-size: 0.75rem;
-}
-
-
-/* =========================================
-   PROJECT 01 - PART 02
-   CREATIVE PROCESS PORTFOLIO
-========================================= */
-
-.portfolio-subsection {
-    margin-top: 120px;
-    padding-top: 75px;
-
-    border-top: 1px solid var(--border);
-}
-
-.pdf-container {
-    background: var(--surface);
-    padding: 10px;
-    border: 1px solid var(--border);
-}
-
-.pdf-preview {
-    width: 100%;
-    height: 800px;
-
-    overflow: hidden;
-    background: #202020;
-}
-
-.pdf-preview iframe {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-    border: none;
-}
-
-.pdf-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 35px;
-
-    margin-top: 30px;
-}
-
-.text-link {
+.project-year {
     color: var(--gold);
-
-    font-size: 0.7rem;
-    letter-spacing: 1.5px;
-
-    padding-bottom: 7px;
-    border-bottom: 1px solid var(--gold-dark);
-
-    transition:
-        color 0.3s ease,
-        border-color 0.3s ease;
-}
-
-.text-link:hover {
-    color: #fff;
-    border-color: #fff;
-}
-
-
-/* =========================================
-   PROJECT 02
-   EDITORIAL DESIGN
-========================================= */
-
-.detail-section {
-    border-top: 1px solid var(--border);
-}
-
-.editorial-layout {
-    display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
-    gap: 65px;
-    align-items: center;
-}
-
-.editorial-image {
-    width: 100%;
-    overflow: hidden;
-    background: var(--surface-light);
-}
-
-.editorial-image img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.6s ease;
-}
-
-.editorial-image:hover img {
-    transform: scale(1.03);
-}
-
-.editorial-content h3,
-.branding-content h3,
-.web-content h3 {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.editorial-content p,
-.branding-content p,
-.web-content p {
-    color: var(--text-muted);
-    font-size: 0.88rem;
-    line-height: 2;
-    margin-bottom: 20px;
-}
-
-
-/* =========================================
-   SKILL TAGS
-========================================= */
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    margin-top: 30px;
-}
-
-.skill-tags span {
-    padding: 8px 13px;
-
-    border: 1px solid var(--border);
-    color: #aaa;
-
-    font-size: 0.65rem;
-    letter-spacing: 0.5px;
-}
-
-
-/* =========================================
-   PROJECT 03
-   BRANDING
-========================================= */
-
-.branding-layout {
-    display: grid;
-    grid-template-columns: 0.7fr 1.3fr;
-    gap: 65px;
-    align-items: center;
-}
-
-.branding-image {
-    width: 100%;
-    overflow: hidden;
-    background: var(--surface-light);
-}
-
-.branding-image img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.6s ease;
-}
-
-.branding-image:hover img {
-    transform: scale(1.03);
-}
-
-
-/* =========================================
-   PROJECT 04
-   WEB DESIGN
-========================================= */
-
-.web-layout {
-    display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
-    gap: 65px;
-    align-items: center;
-}
-
-.web-image {
-    width: 100%;
-    overflow: hidden;
-    background: var(--surface-light);
-}
-
-.web-image img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.6s ease;
-}
-
-.web-image:hover img {
-    transform: scale(1.03);
-}
-
-
-/* =========================================
-   ABOUT SECTION
-========================================= */
-
-.about-section {
-    border-top: 1px solid var(--border);
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 90px;
-    align-items: start;
-}
-
-.about-heading h2 {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 400;
-    line-height: 1.2;
-}
-
-.about-text p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 2;
-    margin-bottom: 22px;
-}
-
-.about-skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
-
-    margin-top: 45px;
-    padding-top: 30px;
-
-    border-top: 1px solid var(--border);
-}
-
-.skill-column h4 {
-    color: var(--gold);
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    margin-bottom: 18px;
-}
-
-.skill-column p {
-    color: #999;
-    font-size: 0.8rem;
-    margin-bottom: 8px;
-}
-
-
-/* =========================================
-   CONTACT SECTION
-========================================= */
-
-.contact-section {
-    border-top: 1px solid var(--border);
-    text-align: center;
-}
-
-.contact-section h2 {
-    font-family: var(--font-display);
-    font-size: clamp(3rem, 7vw, 5.5rem);
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.contact-section > p:not(.section-number) {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-bottom: 35px;
-}
-
-.contact-link {
-    display: inline-block;
-
-    color: var(--gold);
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--gold-dark);
-
-    transition: color 0.3s ease;
-}
-
-.contact-link:hover {
-    color: #fff;
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-    width: 85%;
-    max-width: 1400px;
-
-    margin: auto;
-    padding: 35px 0;
-
-    border-top: 1px solid var(--border);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-logo {
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 3px;
-}
-
-footer p,
-.back-to-top {
-    color: #777;
-    font-size: 0.65rem;
-    letter-spacing: 1.5px;
-}
-
-.back-to-top {
-    transition: color 0.3s ease;
-}
-
-.back-to-top:hover {
-    color: var(--gold);
-}
-
-
-/* =========================================
-   TABLET RESPONSIVE DESIGN
-========================================= */
-
-@media (max-width: 1000px) {
-
-    .content-section,
-    .navbar,
-    footer {
-        width: 90%;
-    }
-
-    .hero {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .hero-bottom {
-        left: 5%;
-        right: 5%;
-    }
-
-    .editorial-layout,
-    .branding-layout,
-    .web-layout {
-        gap: 35px;
-    }
-
-    .about-grid {
-        gap: 45px;
-    }
-
-    .pdf-preview {
-        height: 650px;
-    }
-
-}
-
-
-/* =========================================
-   MOBILE RESPONSIVE DESIGN
-========================================= */
-
-@media (max-width: 768px) {
-
-    /* Navigation */
-
-    .navbar {
-        height: 70px;
-    }
-
-    .nav-links {
-        gap: 17px;
-    }
-
-    .nav-links a {
-        font-size: 0.58rem;
-        letter-spacing: 0.5px;
-    }
-
-    .nav-links .nav-cta {
-        display: none;
-    }
-
-    .logo {
-        font-size: 1rem;
-    }
-
-
-    /* Hero */
-
-    .hero {
-        min-height: 90vh;
-        padding: 120px 7% 100px;
-        background-position: center;
-    }
-
-    .hero h1 {
-        font-size: clamp(3.5rem, 12vw, 5.5rem);
-        letter-spacing: -2px;
-    }
-
-    .hero-bottom {
-        left: 7%;
-        right: 7%;
-        font-size: 0.55rem;
-    }
-
-
-    /* Sections */
-
-    .content-section {
-        width: 90%;
-        padding: 85px 0;
-    }
-
-    .section-heading {
-        margin-bottom: 45px;
-    }
-
-    .section-heading h2 {
-        font-size: 2.7rem;
-    }
-
-
-    /* Project grid */
-
-    .project-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-
-    /* Project 01 */
-
-    .project-subsection {
-        margin-top: 50px;
-    }
-
-    .subsection-heading h3 {
-        font-size: 1.7rem;
-    }
-
-    .portfolio-subsection {
-        margin-top: 80px;
-        padding-top: 55px;
-    }
-
-    .media-details {
-        flex-direction: column;
-    }
-
-
-    /* PDF */
-
-    .pdf-preview {
-        height: 550px;
-    }
-
-    .pdf-actions {
-        gap: 22px;
-    }
-
-
-    /* Editorial, branding and web */
-
-    .editorial-layout,
-    .branding-layout,
-    .web-layout {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .branding-content {
-        order: 2;
-    }
-
-    .branding-image {
-        order: 1;
-    }
-
-
-    /* About */
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .about-skills {
-        gap: 20px;
-    }
-
-
-    /* Contact */
-
-    .contact-section h2 {
-        font-size: 3.5rem;
-    }
-
-
-    /* Footer */
-
-    footer {
-        width: 90%;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-    }
-
-}
-
-
-/* =========================================
-   SMALL MOBILE SCREENS
-========================================= */
-
-@media (max-width: 480px) {
-
-    .nav-links {
-        gap: 10px;
-    }
-
-    .nav-links a {
-        font-size: 0.52rem;
-    }
-
-    .hero h1 {
-        font-size: 3.3rem;
-    }
-
-    .hero-subtitle {
-        font-size: 0.62rem;
-        letter-spacing: 2.5px;
-    }
-
-    .hero-bottom {
-        font-size: 0.48rem;
-        letter-spacing: 1px;
-    }
-
-    .section-heading h2 {
-        font-size: 2.2rem;
-    }
-
-    .subsection-heading h3 {
-        font-size: 1.5rem;
-    }
-
-    .pdf-preview {
-        height: 430px;
-    }
-
-    .play-icon {
-        width: 60px;
-        height: 60px;
-    }
-
-    .about-skills {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .contact-section h2 {
-        font-size: 2.8rem;
-    }
-
-}
-
-/* =========================================
-   PROJECT 01 - LAYOUT FIX
-========================================= */
-
-#project-01 {
-    display: block !important;
-    width: 85%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 120px 0;
-}
-
-/* Keep project heading vertically stacked */
-
-#project-01 .section-heading {
-    display: block !important;
-    width: 100%;
-    max-width: 850px;
-    margin: 0 0 70px 0;
-}
-
-#project-01 .section-heading h2 {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-#project-01 .section-description {
-    display: block;
-    width: 100%;
-    max-width: 700px;
-    margin: 0;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
 }
 
 
@@ -1097,24 +366,35 @@ footer p,
    PROJECT SUBSECTIONS
 ========================================= */
 
-#project-01 .project-subsection {
-    display: block !important;
-    width: 100%;
-    margin-top: 65px;
+.project-subsection {
+    margin-bottom: 70px;
 }
 
-#project-01 .subsection-heading {
-    display: block !important;
-    width: 100%;
-    margin-bottom: 30px;
+.subsection-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
 }
 
-#project-01 .subsection-heading h3 {
-    margin-bottom: 15px;
+.subsection-heading h4 {
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    margin-top: 8px;
 }
 
-#project-01 .subsection-heading p {
-    max-width: 750px;
+.sub-number {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+}
+
+.sub-detail {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 1px;
 }
 
 
@@ -1122,106 +402,533 @@ footer p,
    VIDEO THUMBNAIL
 ========================================= */
 
-#project-01 .video-thumbnail {
+.video-thumbnail {
     display: block;
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-    background: #202020;
+    background: var(--surface-light);
+    border: 1px solid var(--border);
 }
 
-#project-01 .video-thumbnail img {
-    display: block;
-    width: 100%;
+.video-thumbnail img {
     height: 100%;
+    width: 100%;
     object-fit: cover;
+    transition: transform 0.8s ease, opacity 0.5s ease;
 }
 
-#project-01 .play-overlay {
+.video-thumbnail:hover img {
+    transform: scale(1.04);
+    opacity: 0.7;
+}
+
+.thumbnail-overlay {
     position: absolute;
     inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.4),
+        transparent 35%,
+        transparent 55%,
+        rgba(0,0,0,0.75)
+    );
+}
+
+.thumbnail-top {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: white;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75px;
+    width: 75px;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    padding-left: 4px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.video-thumbnail:hover .play-button {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #111;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.thumbnail-bottom {
+    position: absolute;
+    bottom: 28px;
+    left: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.thumbnail-caption {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+}
+
+.thumbnail-bottom h5 {
+    font-size: 27px;
+    margin-top: 8px;
+}
+
+.thumbnail-arrow {
+    font-size: 30px;
+    color: var(--gold);
+}
+
+.media-caption {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 1px;
+    color: var(--muted);
+}
+
+
+/* =========================================
+   PDF SECTION
+========================================= */
+
+.pdf-section {
+    margin-top: 90px;
+}
+
+.pdf-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    min-height: 390px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.pdf-info {
+    padding: 45px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-right: 1px solid var(--border);
+}
+
+.pdf-icon {
+    height: 48px;
+    width: 40px;
+    border: 1px solid var(--gold);
+    display: flex;
     align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    margin-bottom: 35px;
+}
+
+.pdf-label {
+    color: var(--gold);
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.pdf-text h5 {
+    font-size: 32px;
+    letter-spacing: -1.5px;
+    margin: 15px 0;
+}
+
+.pdf-text p {
+    font-size: 12px;
+    line-height: 1.9;
+    color: var(--muted);
+    max-width: 350px;
+}
+
+.pdf-button {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    min-width: 210px;
+    gap: 20px;
+    padding: 15px 18px;
+    border: 1px solid var(--border);
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    transition: 0.3s ease;
+}
+
+.pdf-button:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.pdf-button span {
+    color: var(--gold);
 }
 
 
-/* =========================================
-   PDF PORTFOLIO
-========================================= */
+/* PDF PREVIEW */
 
-#project-01 .portfolio-subsection {
-    display: block !important;
-    width: 100%;
-    margin-top: 120px;
-    padding-top: 75px;
-    border-top: 1px solid #303030;
-}
-
-#project-01 .pdf-container {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background: #171717;
-    border: 1px solid #303030;
-}
-
-#project-01 .pdf-preview {
-    display: block;
-    width: 100% !important;
-    height: 800px !important;
-    min-height: 800px;
+.pdf-preview {
+    position: relative;
+    min-height: 390px;
     overflow: hidden;
-    background: #202020;
+    background: #e8e8e8;
 }
 
-#project-01 .pdf-preview iframe {
-    display: block;
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 800px;
+.pdf-preview iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 390px;
     border: none;
 }
 
+.pdf-preview-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.pdf-preview-label {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 3;
+    pointer-events: none;
+    background: rgba(11,12,14,0.9);
+    color: white;
+    padding: 12px 15px;
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.pdf-preview-label span {
+    color: var(--gold);
+    margin-left: 10px;
+}
+
 
 /* =========================================
-   PDF LINKS
+   PROJECT FOOTER
 ========================================= */
 
-#project-01 .pdf-actions {
+.project-footer {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 25px;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-top: 1px solid var(--border);
+}
+
+.project-footer span {
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 1px;
+    color: var(--gold);
+}
+
+.project-footer p {
+    margin-top: 10px;
+    font-size: 10px;
+    color: var(--muted);
 }
 
 
 /* =========================================
-   MOBILE
+   CONTACT
 ========================================= */
 
-@media (max-width: 768px) {
-
-    #project-01 {
-        width: 90%;
-        padding: 80px 0;
-    }
-
-    #project-01 .pdf-preview {
-        height: 550px !important;
-        min-height: 550px;
-    }
-
-    #project-01 .pdf-preview iframe {
-        min-height: 550px;
-    }
-
-    #project-01 .portfolio-subsection {
-        margin-top: 80px;
-        padding-top: 50px;
-    }
-
+.contact-section {
+    padding: 130px 9%;
+    border-top: 1px solid var(--border);
+    background:
+        radial-gradient(
+            ellipse at 70% 80%,
+            rgba(196,154,99,0.07),
+            transparent 50%
+        ),
+        var(--surface);
 }
 
+.contact-section h2 {
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: 0.95;
+    letter-spacing: -6px;
+    margin: 35px 0;
+}
+
+.contact-section h2 span {
+    color: var(--gold);
+}
+
+.contact-section p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.contact-button {
+    display: inline-flex;
+    gap: 35px;
+    padding: 17px 22px;
+    background: var(--white);
+    color: #111;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.contact-button:hover {
+    background: var(--gold);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    min-height: 90px;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer p,
+.footer > a:last-child {
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 1px;
+    color: var(--muted);
+}
+
+.footer > a:last-child:hover {
+    color: var(--gold);
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero h1 {
+        letter-spacing: -4px;
+    }
+
+    .introduction,
+    .work-section,
+    .contact-section {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .pdf-container {
+        grid-template-columns: 1fr;
+    }
+
+    .pdf-info {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .pdf-preview {
+        min-height: 400px;
+    }
+
+    .pdf-preview iframe {
+        min-height: 400px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: 65px;
+        padding: 0 6%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 8px;
+    }
+
+    .nav-contact {
+        display: none;
+    }
+
+    .hero {
+        min-height: 650px;
+        height: calc(100svh - 65px);
+        padding: 0 6%;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 11vw, 68px);
+        letter-spacing: -3px;
+    }
+
+    .eyebrow {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .hero-footer {
+        left: 6%;
+        right: 6%;
+        font-size: 7px;
+    }
+
+    .hero-footer span:nth-child(2) {
+        display: none;
+    }
+
+    .introduction,
+    .work-section,
+    .contact-section {
+        padding: 85px 6%;
+    }
+
+    .intro-content h2 {
+        font-size: 38px;
+        letter-spacing: -2px;
+    }
+
+    .intro-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+    }
+
+    .work-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .work-heading h2 {
+        font-size: 55px;
+        letter-spacing: -3px;
+    }
+
+    .work-subtitle {
+        text-align: left;
+    }
+
+    .project-title-row h3 {
+        font-size: 38px;
+    }
+
+    .project-header {
+        font-size: 8px;
+    }
+
+    .sub-detail {
+        font-size: 7px;
+        text-align: right;
+    }
+
+    .video-thumbnail {
+        aspect-ratio: 16 / 10;
+    }
+
+    .thumbnail-top {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        font-size: 7px;
+    }
+
+    .thumbnail-bottom {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .thumbnail-bottom h5 {
+        font-size: 19px;
+    }
+
+    .thumbnail-caption {
+        font-size: 7px;
+    }
+
+    .play-button {
+        width: 55px;
+        height: 55px;
+        font-size: 16px;
+    }
+
+    .media-caption {
+        font-size: 7px;
+        gap: 10px;
+    }
+
+    .pdf-info {
+        padding: 30px 22px;
+    }
+
+    .pdf-preview,
+    .pdf-preview iframe {
+        min-height: 320px;
+    }
+
+    .project-footer {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .contact-section h2 {
+        font-size: 60px;
+        letter-spacing: -3px;
+    }
+
+    .footer {
+        padding: 25px 6%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer p {
+        order: 3;
+        width: 100%;
+    }
+}
